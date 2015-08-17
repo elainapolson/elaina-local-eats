@@ -1,0 +1,40 @@
+function randomFact(){
+  var facts = [
+    [ "The first diner was created in 1872, by a man named Walter Scott. He decided to sell food out of a horse-pulled wagon to employees of the Providence Journal, in Providence, Rhode Island. Scott's diner can be considered the first diner with “walk up” windows that were located on each side of the wagon.(Source: http://www.factslides.com)" ], 
+    [ "An average person in the U.S. eats 35 tons of food in a lifetime. (Source: http://www.factslides.com)" ],
+    [ "Fortune cookies are not a traditional Chinese custom. They were invented in early 1900 in San Francisco. (Source: http://www.factslides.com)" ],
+    [ "Airplane food isn't very tasty because our sense of smell and taste decrease from 20 to 50 percent. (Source: http://www.factslides.com)"],
+    [ "Even thinking about a favorite food triggered release of dopamine, a feel-good hormone also produced during sex and drug use. (Source: http://www.factslides.com)" ],
+    [ "49% of U.S. Adults eat one sandwich a day. (Source: http://www.factslides.com)" ],
+    [ "The jars of Nutella sold in a year could cover The Great Wall of China 8 times. (Source: http://www.factslides.com)" ],
+    [ "Most wasabi consumed is not real wasabi, but colored horseradish. (Source: Buzzfeed)" ],
+    [ "Oklahoma’s state vegetable is the watermelon. (Source: Buzzfeed)" ],
+    [ "One of the most popular pizza toppings in Brazil is green peas. (Source: Buzzfeed)" ],
+    [ "The most expensive pizza in the world costs $12,000 and takes 72 hours to make. (Source: Buzzfeed)" ],
+    [ "The Dunkin’ Donuts in South Korea offer doughnut flavors such as Kimchi Croquette and Glazed Garlic. (Source: Buzzfeed)" ],
+    [ "There is an amusement park in Tokyo that offers Raw Horse Flesh-flavored ice cream. (Source: Buzzfeed)" ],
+    [ "One fast food hamburger may contain meat from 100 different cows. (Source: Buzzfeed)" ],
+    [ "Chuck E. Cheese pizza restaurants were created by the inventor of the Atari video game system, Nolan Bushnell. (Source: Buzzfeed)" ],
+    [ "The popsicle was invented by an 11-year-old in 1905. (Source: Buzzfeed)" ],
+    [ "There are around 2000 different plant types that humans use to cultivate food. (Source: www.sciencekids.co)" ],
+    [ "China is the largest producer of garlic, producing over 10 million tons in 2008 and accounting for over 75% of world output. (Source: www.sciencekids.co)" ],
+    [ "India is the world’s largest producer of bananas, producing nearly 22 million tons in 2007. (Source: www.sciencekids.co)" ],
+    [ "Before 2013, Pizza Hut was the number one purchaser of kale. They didn’t even serve it though – they used it as a decoration in their salad bars. (Source: Buzzfeed)" ],
+    [ "Shaquille O’Neal owns about 10% of all Five Guys restaurants in North America. (Source: Buzzfeed)" ],
+    [ "Because of the restaurant’s reputation to stay open after disasters, the “Waffle House Index” was created as an informal assessment of the damage caused by a storm. (Source: Buzzfeed)" ],
+    [ "According to Waffle House, if you laid all of the bacon they serve in a year end-to-end, it would wrap all the way around the equator. (Source: Buzzfeed)" ],
+    [ "Nine of ten restaurant managers started at entry level.  (Source: www.restaurant.org)" ],
+    [ "Eight in ten restaurant owners started their industry careers in entry-level positions. (Source: www.restaurant.org)" ],
+    [ "Nine in ten restaurants have fewer than 50 employees. (Source: www.restaurant.org)" ],
+    [ "The concept of selling food for profit goes back to ancient civilizations, including ancient Rome and China, where street vendors sold bread and wine to people in cities. Fast forward several centuries to the Middle Ages and the roadside inn is the earliest form of our modern day sit-down restaurant. Of course, the menu choices were strictly chef’s choice and patrons had no choice but to dine family style. (Source: restaurants.about.com)" ],
+    [ "After Louis XVI and Marie Antoinette lost their heads during the French Revolution, the French aristocracy crumbled and chefs, once employed by noble households, found themselves out of a job. So many of these displaced workers decided to open up their own establishments and offer prix fixe meals to the masses. Eventually the French style of dining out spread to Great Britain and across the Atlantic to the United States. (Source: restaurants.about.com)" ],
+    [ "The world’s largest restaurant is in Syria. Bawabet Dimashq Restaurant, which translates to Damascus Gate Restaurant, has 6,014 seats and is located in Damascus, Syria. (Source: restaurants.about.com)" ],
+    [ "The oldest restaurant in the United States is in Boston. The Union Oyster House has been serving up fresh oysters and more since 1826. (Source: restaurants.about.com)" ],
+    [ "Restaurant is a French term. Restaurant was once used to describe the rich bouillons served at taverns and public houses in France, to restore the spirits and relieve ailments. (Source: restaurants.about.com)" ],
+    [ "The world’s oldest restaurant is in Spain. According to the Guinness Book of World Records, Botin Restaurant in Madrid, Spain is the world’s oldest operating restaurant, which has been in business since 1725. However, there are other restaurants that claim to be older than Botin, including Stiftskeller St. Peter in Salzburg, Austria, open since 803 and Zum Franziskaner in Stockholm, Sweden, open since 1421. (Source: restaurants.about.com)" ],
+    [ "The world’s most expensive burger costs $5000. There are plenty of expensive burgers out there. The 666 Food Truck in New York City offers a burger with truffles, foie gras and Himalayan salt for $666. Paris, Las Vegas offers a $777 Kobe beef burger, which contains a Maine lobster, caramelized onions, imported Brie cheese, crispy prosciutto, and 100-year aged Balsamic vinegar. But the most expensive burger? It goes to Fleur de Lys at Mandalay Bay, Las Vegas, which offers an astounding $5000 burger. (Source: restaurants.about.com)" ],
+    [ "The Average American Spends $2505 Eating Out. According to the USDA, Americans spend just over $2500 eating away from home. A bonus, Americans drop $8 billion on dining on just Valentine’s Day. (Source: restaurants.about.com)" ]
+  ]
+  var fact = facts[Math.floor(Math.random()*facts.length)][0];
+  return fact;
+}

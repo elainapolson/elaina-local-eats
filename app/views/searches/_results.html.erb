@@ -1,0 +1,24 @@
+<% if venues == nil  %>
+  <h3>Welcome</h3>
+<% elsif venues.empty? %>
+  <h3>Aw, bummer! There aren't any local favorite <%= query %> spots in that location. Toast is sad.<h3>
+  <img src="https://img06.deviantart.net/269d/i/2011/299/6/3/sad_toast_by_earcl01-d4dzy3v.png" style="height:75%;width:75%;display:block;margin:auto;">
+<% elsif venues %>
+  <% venues.each do |venue| %>
+    <div id = "<%=venue['venue']['id'] %>">
+    <a href="https://foursquare.com/v/<%= venue['venue']['id'] %>" target="_blank"><h3><%= venue['venue']['name'] %></h3></a>
+      <p><%= venue['venue']['location']['formattedAddress'].join(" ") %></p>
+    </div>
+  <% end %>
+<% end %>
+
+<script>
+  var locations = JSON.parse("<%= locations %>".replace(/&quot;/g, '"'));
+  if (locations.length != 0){
+     createMap(locations);
+     $('#myModal').modal('hide');
+  }else{
+    createMap(locations);
+    $('#myModal').modal('hide');
+  }
+</script>

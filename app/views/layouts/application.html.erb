@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>localeats:3000</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
+  <%= include_gon(watch: true) %>
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_maps_key']%>" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <%= yield %>
+
+<div class="footer">
+  <div class="footer-text">Made with <i class="fa fa-heart"></i> by <a href="https://www.github.com/elainapolson" target="blank">Elaina Polson</a>, <a href="https://www.github.com/minling" target="blank">Minling Zhao</a> &amp; <a href="https://www.github.com/ryannyunn" target="blank">Ryan Yun</a> at <span id = "slash">//</span> <a href="https://www.flatironschool.com" target="blank" style = "text-decoration: none;">Flatiron School</a>.</div>
+</div>
+
+</body>
+</html>

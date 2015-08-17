@@ -1,0 +1,38 @@
+<div class = "intro-header">
+  <div class="container">
+    <div class = "center">
+
+      <h1 id="title"><%= link_to 'localeats:3000', '/' %></h1>
+      <h2>Find the top-rated, most frequented spots in any city!</h2>
+
+    <div class = "form-block">
+      <%= form_tag('/searches') do %>
+        <div class ="form-group">
+          <%= label_tag 'search[query]', 'Looking for', :class => 'labels' %>
+          <%= text_field_tag 'search[query]', '', :required => true, :class => "form-control", :placeholder => "pizza" %>
+        </div>
+  
+          <%= hidden_field_tag 'search[ll]' %>
+
+        <div class ="form-group">
+          <%= label_tag 'search[near]', 'Near', :class => 'labels' %>
+          <%= text_field_tag 'search[near]', '', :required => true, :class => "form-control", :placeholder => "East Village, NY"%>
+        </div>
+
+          <button id="location" class= "ghost-button-rounded-corners" type = "button">Use Current Location Instead</button>
+          <br>
+          <br>
+
+        <div id = "display_location">
+        </div>
+    
+    </div>
+      
+          <%= submit_tag 'Search', :id => 'submit', :class => 'ghost-button-rounded-corners'%>
+          <%= submit_tag 'Reset', :type => 'reset', :style => "display: none"%>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

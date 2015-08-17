@@ -1,0 +1,28 @@
+<%= render 'form' %>
+
+<div class= "all-results">
+<div class = "about">
+  <h1>About</h1>
+  <p>localeats:3000 is an app that allows you to search for the best restaurants that locals frequent.</p>
+  <p>We created an algorithm that returns only highly-rated restaurants that people keep going back to. For this project, we used the <a href = "http://developer.foursquare.com">Foursquare API</a> to get data about venue ratings and user checkins, as well as the <a href = "http://developers.google.com/maps/">Google Maps API</a> to visualize venues on an interactive map.</p>
+  <p>Check out our source code <a href = "https://github.com/ryannyunn/wherethelocalsat">here!</a></p>
+
+  <h2>The Team</h2>
+
+    <a href = "http://www.minlingzhao.com/" target="_blank"><img src = "http://web0615.students.flatironschool.com/img/students/minling.jpg"></a>
+ 
+    <a href = "http://elainapolson.github.io"target="_blank"><img src = "http://web0615.students.flatironschool.com/img/students/elaina_polson_index.jpg"></a>
+
+    <a href = "http://www.ryanyun.nyc" target="_blank"><img src ="http://web0615.students.flatironschool.com/img/students/ryan_yun_index_profile.jpg"></a>
+
+</div>
+
+  <div id="map" class="col-md-6 hidden"></div>
+  <div id="results" class="jumbotron hidden col-md-6"></div>
+</div>
+
+<!-- Fact Modal -->
+<%= render 'modal' %>
+<!-- End Fact Modal -->
+
+
