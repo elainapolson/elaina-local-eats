@@ -29,7 +29,6 @@ class Search
         @google_map_locs << [name, latitude, longitude, i, address, rating]
     end
     @google_map_locs
-    binding.pry
   end
   
 end

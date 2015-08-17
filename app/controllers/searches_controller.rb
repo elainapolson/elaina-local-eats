@@ -17,14 +17,13 @@ class SearchesController < ApplicationController
     end
 
     if @venues == "error message"
-      # do something
+      @venues = [] # will return sad toast
     else
       @google_map_locs = Search.get_google_locations(@venues)
-    end
-
-    respond_to do |format|
-      format.html {render :index}
-      format.js
+      respond_to do |format|
+        format.html {render :index}
+        format.js
+      end
     end
   end
   
