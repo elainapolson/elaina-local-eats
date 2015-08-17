@@ -12,9 +12,8 @@ class FoursquareWrapper
   end
 
   def search_by_nearby(query, location)
-    while @radius <= 1000
+    while @offset <= 700 
       api_request = "https://api.foursquare.com/v2/venues/explore?client_id=#{@id}&client_secret=#{@secret}&query=#{query}&near=#{location}&radius=900&offset=#{@offset}&limit=50&v=20140806&m=foursquare"
-
       begin 
         api_response = open(api_request).read
       rescue *HTTP_ERRORS => error
@@ -23,9 +22,9 @@ class FoursquareWrapper
       
       response = JSON.parse(api_response)
       @venues << parse_response(response)
-      break if @radiu == 1000 && @venues.empty? 
+      break if @offset == 700 && @venues.empty? 
       @offset += 50
-      @radius += 50
+      # @radius += 100
     end  
     return @venues.compact.flatten
   end
@@ -33,7 +32,6 @@ class FoursquareWrapper
   def search_by_coordinates(query, coordinates)
     while @offset <= 700 
       api_request = "https://api.foursquare.com/v2/venues/explore?client_id=#{@id}&client_secret=#{@secret}&query=#{query}&radius=900&ll=#{coordinates}&offset=#{@offset}&limit=50&v=20140806&m=foursquare"
-
       begin 
         api_response = open(api_request).read
       rescue *HTTP_ERRORS => error
